@@ -13,10 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-//Route::get('/{any}', 'App\Http\Controllers\HomeController::class@index')->where('any', '.*');
 Route::get('/{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->where('any', '.*');
 
