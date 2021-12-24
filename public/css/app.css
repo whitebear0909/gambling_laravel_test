@@ -1,1 +1,21 @@
-.welcome-txt{margin-top:200px;text-align:center}.aff-text,.welcome-txt{text-shadow:#726f61 1px 0 10px}.aff-text{margin-top:20px}.notfound-txt{color:red;margin-top:200px;text-align:center;text-shadow:#726f61 1px 0 10px}
+/* ==========================================================================
+    Builds our style structure
+        https://sass-guidelin.es/#the-7-1-pattern
+   ========================================================================== */
+.welcome-txt {
+  text-align: center;
+  margin-top: 200px;
+  text-shadow: #726f61 1px 0 10px;
+}
+
+.aff-text {
+  margin-top: 20px;
+  text-shadow: #726f61 1px 0 10px;
+}
+
+.notfound-txt {
+  text-align: center;
+  margin-top: 200px;
+  text-shadow: #726f61 1px 0 10px;
+  color: red;
+}

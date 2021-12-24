@@ -9,7 +9,17 @@
       :current-page="currentPage"
       :per-page="perPage"
       show-empty
-    ></b-table>
+      :busy="isLoading"
+      class="mt-3"
+      outlined
+    >
+      <template #table-busy>
+        <div class="text-center text-danger my-2">
+          <b-spinner class="align-middle"></b-spinner>
+          <strong>Loading...</strong>
+        </div>
+      </template>
+    </b-table>
     <b-col sm="7" md="6" class="my-1 m-auto">
       <b-pagination
         v-model="currentPage"
