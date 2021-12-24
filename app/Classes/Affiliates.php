@@ -35,9 +35,9 @@ class Affiliates {
     /**
      * This function returns affiliates array filtered by distance limit
      *
-     * @param float $distance_limit  distance limit(default 100)
      * @param float $latitude_b  latitude of gambling
      * @param float $longitude_b  longitude of gambling
+     * @param float $distance_limit  distance limit(default 100)
      */
     public function getAffiliatesByDistance($latitude_b, $longitude_b, $distance_limit = 100){
       $temp = [];

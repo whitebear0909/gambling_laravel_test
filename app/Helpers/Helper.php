@@ -12,6 +12,7 @@ class Helper
      * @param float  $longitude_a  longitude of first endpoint
      * @param float  $latitude_b   latitude of second endpoint
      * @param float  $longitude_b  longitude of second endpoint
+     * @param float  $worldradius  radius of world
      * @return float  $distance   distance between two point
      */
     public static function getDistance($latitude_a, $longitude_a, $latitude_b, $longitude_b, $worldradius = 6371.0088)

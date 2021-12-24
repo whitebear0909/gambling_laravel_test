@@ -17,11 +17,10 @@ class AffiliateController extends Controller
      */
     public function getAffiliates()
     {
-        $fileName = config('gambling.repositoryfilename');
-        $contents = Storage::disk('local')->get($fileName);
+        $contents = Storage::disk('local')->get(config('gambling.repositoryfilename'));
         $affiliates = new Affiliates();
         $affiliates->create($contents);
-        $affiliates->getAffiliatesByDistance(config('gambling.latitude'), config('gambling.longitude'), config('gambling.distancelimit'), config('gambling.worldradius'));
+        $affiliates->getAffiliatesByDistance(config('gambling.latitude'), config('gambling.longitude'));
         return $affiliates->getAffiliates();
     }
 }
