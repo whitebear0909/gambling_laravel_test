@@ -3,7 +3,7 @@
 laravel composer install.
 
 ```
-composer install
+composer require laravel/laravel
 ```
 
 node package install for vue
@@ -37,8 +37,9 @@ php artisan test --testsuite=Unit --stop-on-failure
 - App/Classes/Affiliates.php -> responsible for making affiliate array from JSON and filtering them by distance.
 - App/Helpers/Helper.php -> define some helper functions.
 - Config/gambling.php -> config variables of this project.
-- Routes/web.php -> register api for web// Route::get('/{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->where('any', '.*');
+- Routes/web.php -> register api for web// Route::get('/{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->where('any', '.\*');
 - Routes/api.php -> register api
+
   ```
   Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
       return $request->user();
@@ -46,6 +47,7 @@ php artisan test --testsuite=Unit --stop-on-failure
 
   Route::get('/v1/affiliates', [AffiliateController::class, 'getAffiliates']);
   ```
+
 ### - Frontend(Vue)
 
 - resources/js/views -> main page vue components
